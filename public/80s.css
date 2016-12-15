@@ -61,7 +61,7 @@
 	font-family: 'Share Tech Mono';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Share Tech Mono'), local('ShareTechMono-Regular'), url(https://fonts.gstatic.com/s/sharetechmono/v6/RQxK-3RA0Lnf3gnnnNrAsYdJ2JT0J65PSe7wdxAnx_I.woff2) format('woff2');
+	src: local('Share Tech Mono'), local('ShareTechMono-Regular'), url(himg/ttps://fonts.gstatic.com/s/sharetechmono/v6/RQxK-3RA0Lnf3gnnnNrAsYdJ2JT0J65PSe7wdxAnx_I.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 ::-webkit-scrollbar {
@@ -72,7 +72,7 @@
 }
 .calvin {
 
-	/*background-image: url(calvin.png);*/
+	/*background-image: url(cimg/alvin.png);*/
 
 	/*background-size: cover; */
 	mix-blend-mode: overlay;
@@ -348,7 +348,7 @@ div > .mdl-chip {
 .madasadam > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url(madasadam.png);
+	background: url("img/madasadam.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -388,7 +388,7 @@ div > .mdl-chip {
 .orixas > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("orixas.png");
+	background: url("img/orixas.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -428,7 +428,7 @@ div > .mdl-chip {
 .underRiders > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("underRiders.png");
+	background: url("img/underRiders.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -468,7 +468,7 @@ div > .mdl-chip {
 .skyBattle > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("skybattle.png");
+	background: url("img/skybattle.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -508,7 +508,7 @@ div > .mdl-chip {
 .ergos > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("ergos.png");
+	background: url("img/ergos.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -548,7 +548,7 @@ div > .mdl-chip {
 .sosTheBus > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("sosTheBus.png");
+	background: url("img/sosTheBus.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -588,7 +588,7 @@ div > .mdl-chip {
 .getTheRed > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("getTheRed.png");
+	background: url("img/getTheRed.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -628,7 +628,7 @@ div > .mdl-chip {
 .fighTche > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("fighTche.png");
+	background: url("img/fighTche.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -668,7 +668,7 @@ div > .mdl-chip {
 .spaceInvasion > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("spaceInvasion.png");
+	background: url("img/spaceInvasion.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -708,7 +708,7 @@ div > .mdl-chip {
 .breakout > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("breakout.png");
+	background: url("img/breakout.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -748,7 +748,7 @@ div > .mdl-chip {
 .tapper > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("tapper.png");
+	background: url("img/tapper.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -788,7 +788,7 @@ div > .mdl-chip {
 .spiderThreat > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("spiderThreat.png");
+	background: url("img/spiderThreat.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -828,7 +828,7 @@ div > .mdl-chip {
 .wackySheriffFromMars > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("wackySheriffFromMars.png");
+	background: url("img/wackySheriffFromMars.png");
 	background-size: cover;
 	background-position: center;
 	height: 150px;
@@ -868,7 +868,7 @@ div > .mdl-chip {
 .canestechnologies > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("canestechnologies.png");
+	background: url("img/canestechnologies.png");
 	background-size: 50%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -910,7 +910,7 @@ div > .mdl-chip {
 .harion > .mdl-card__title {
 	align-items: flex-start;
 	padding-bottom: 0;
-	background: url("harion.png");
+	background: url("img/harion.png");
 	background-size: 50%;
 	background-position: center;
 	background-repeat: no-repeat;
