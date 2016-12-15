@@ -1,0 +1,781 @@
+doctype html
+html
+  head
+    //3rd Party CDN
+    script(src='https://code.getmdl.io/1.1.3/material.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    script(src='index.js')
+    //- script(src='jquery.typer.js')
+    script(type="text/javascript", src='//use.fontawesome.com/1a37bba375.js')
+    link(rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-red.min.css")
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    link(href="https://file.myfontastic.com/9h3NjiGSLW9JmuAHuLfceb/icons.css" rel="stylesheet")
+    //META
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0')      
+    link(rel="stylesheet" href='80s.css')
+    title
+      |Calvin Pacheco
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32")
+    link(rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16")
+    link(rel="manifest" href="/manifest.json")
+    link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="apple-mobile-web-app-title" content="Calvin Pacheco")
+    meta(name="application-name" content="Calvin Pacheco")
+    meta(name="theme-color" content="#1c6335")
+  body      
+       .mdl-layout.mdl-js-layout.mdl-layout--fixed-header.mdl-layout--no-desktop-drawer-button.screen
+        main.mdl-layout__content
+         .mdl-grid.mdl-grid--no-spacing
+          //- .mdl-cell.mdl-cell--8-col-tablet.mdl-cell--4-phone.mdl-cell--2-col-desktop
+          .mdl-cell.mdl-cell--8-col-tablet.mdl-cell--4-phone.mdl-cell--hide-desktop
+            .mdl-grid.mdl-grid--no-spacing
+                .mdl-cell--12-col
+                  .display-flex
+                    .imageDisplay.miniDisplay
+                      .aspect
+                        .calvin.visual1
+                         img(src="calvin.gif")
+                    .name.margin-20 
+                      | Calvin Luiz Pacheco
+                  .mdl-tabs.mdl-js-ripple-effect
+                    .mdl-tabs__tab-bar(style="border: none;")
+                      a.mdl-tabs__tab.mdl-tabs-fx-none.mdl-tabs__tab-disable(id="tabHi")
+                        i.fa.fa-hand-spock-o.fontasticFix-x-large(aria-hidden="true")
+                      a.mdl-tabs__tab.mdl-tabs-fx-none(id="tabKnowMe")
+                        .icon-spock.fontasticFix-xx-large                        
+                      a.mdl-tabs__tab.mdl-tabs-fx-none.mdl-tabs__tab-disable(id="tabBlog")
+                        i.fa.fa-comment-o.fontasticFix-x-large(aria-hidden="true")
+                      a.mdl-tabs__tab.mdl-tabs-fx-none.mdl-tabs__tab-disable(id="tabExp")
+                        .icon-level-up.fontasticFix-xx-large
+                      a.mdl-tabs__tab.mdl-tabs-fx-none(id="tabSkills")
+                        .icon-skills.fontasticFix-xx-large
+                      a.mdl-tabs__tab.mdl-tabs-fx-none(id="tabProjects")
+                        .icon-macintosh.fontasticFix-xx-large
+          .mdl-cell.mdl-cell--12-col
+           .mdl-grid
+            .mdl-cell.mdl-cell--2-col-desktop.mdl-cell--hide-tablet.mdl-cell--hide-phone
+              .mdl-grid.mdl-grid--no-spacing
+                .mdl-cell--12-col
+                  .imageDisplay
+                    .aspect
+                      .calvin.visual1
+                       img(src="calvin.gif")(id="profile1")
+                  .name.margin-2 Calvin Luiz Pacheco       
+                  .mdl-card__actions.mdl-card--border                  
+                  ul.mdl-list
+                      li.mdl-list__item.padding-0
+                        .mdl-button.mdl-js-button.disable(id="btSayHi")
+                          i.fa.fa-hand-spock-o.fontasticFix-desktop(aria-hidden="true" style="line-height: 1.2")
+                          | Say Hi!                    
+                      li.mdl-list__item.padding-0
+                        .mdl-button.mdl-js-button(id="btKnowMe")
+                          .icon-spock.fontasticFix-desktop
+                          | Know me
+                      li.mdl-list__item.padding-0
+                        .mdl-button.mdl-js-button.disable(id="btBlog")
+                          i.fa.fa-comment-o.fontasticFix-desktop(aria-hidden="true" style="line-height: 1.2")
+                          | Blog
+                      li.mdl-list__item.padding-0
+                        .mdl-button.mdl-js-button.disable(id="btBlog")
+                          .icon-level-up.fontasticFix-desktop
+                          | Experience
+                      li.mdl-list__item.padding-0
+                        .mdl-button.mdl-js-button(id="btSkills")
+                          .icon-skills.fontasticFix-desktop
+                          | Skills
+                      li.mdl-list__item.padding-0
+                        .mdl-button.mdl-js-button(id="btProjects")
+                          .icon-macintosh.fontasticFix-desktop
+                          | Projects
+                    //| </br> &nbsp
+            .mdl-cell.mdl-cell--10-col-desktop.mdl-cell--8-col-tablet
+              .mdl-cell.mdl-cell--12-col-desktop.mdl-cell.mdl-cell--8-col-tablet.mdl-cell--4-phone.margin-top-0.padding-left-right-8(id="tbTitles")
+                 h4.grid-title
+                    | *********
+              .mdl-grid(id="knowme")
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-knowme.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                     h4
+                      | First Contact       
+                   .mdl-card__supporting-text
+                     | When I was five years old, my dad bought a i486. He used to let me some notes explaining how to use DOS, before he went work. My firsts and favorites games were Mortal Kombat II and Fifa95. I remember like yesterday, I putting a cheat-code, "AICULEDSSUL", to win all rounds just with one hit on MKII. Since that time, I have been addicting to create games. So, My name is Calvin and I'm software developer.
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-knowme.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                     h4
+                      | First Contact       
+                   .mdl-card__supporting-text
+                     | When I was five years old, my dad bought a i486. He used to let me some notes explaining how to use DOS, before he went work. My firsts and favorites games were Mortal Kombat II and Fifa95. I remember like yesterday, I putting a cheat-code, "AICULEDSSUL", to win all rounds just with one hit on MKII. Since that time, I have been addicting to create games. So, My name is Calvin and I'm software developer.                     
+              .mdl-grid(id="skills")
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                     h4
+                      | First Contact       
+                   .mdl-card__supporting-text
+                     | When I was five years old, my dad bought a i486. He used to let me some notes explaining how to use DOS, before he went work. My firsts and favorites games were Mortal Kombat II and Fifa95. I remember like yesterday, I putting a cheat-code, "AICULEDSSUL", to win all rounds just with one hit on MKII. Since that time, I have been addicting to create games. So, My name is Calvin and I'm software developer.                
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Programming                      
+                      | language
+                   .mdl-card__supporting-text(id="programmingLanguage")
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | C
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | C++
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | C#
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Pascal
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Object Pascal
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Python
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | PHP
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Java
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | JavaScript
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | ActionScript
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Google Apps Script
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | SQL
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | PL/SQL                      
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-code(aria-hidden="true")
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-2.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Database
+                   .mdl-card__supporting-text(id="database")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Oracle
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | MySQL
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | PostGreSQL
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Microsoft SQL Server
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Sysbase
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Firebase
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | MongoDB                    
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-database(aria-hidden="true")
+                .mdl-cell.mdl-cell--3-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-2.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Cloud plataform
+                   .mdl-card__supporting-text(id="cloudplataform")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Heroku
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Microsoft Azure              
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-cloud(aria-hidden="true")                      
+                .mdl-cell.mdl-cell--5-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-4.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Version control
+                   .mdl-card__supporting-text(id="versionControl")
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Subversion
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Git
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Team Foundation Server
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Visual Studio Team Service                
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-code-fork(aria-hidden="true")
+                .mdl-cell.mdl-cell--3-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-4.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Multimedia framework
+                   .mdl-card__supporting-text(id="versionControl")
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | DirectShow
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Media Foundation
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-video-camera(aria-hidden="true")
+                .mdl-cell.mdl-cell--3-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-4.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Internet infrastructure 
+                   .mdl-card__supporting-text(id="versionControl")
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | DNS zones
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Cloudflare
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-internet-explorer(aria-hidden="true")
+                .mdl-cell.mdl-cell--3-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-4.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Directory service
+                   .mdl-card__supporting-text(id="versionControl")
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Active Directory
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | OPENLDAP
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-sitemap(aria-hidden="true")
+                .mdl-cell.mdl-cell--3-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-4.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Handling codecs
+                   .mdl-card__supporting-text(id="versionControl")
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | wmv                   
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | wma                           
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | H264
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | MP3
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | WebM
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | WebP
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-play(aria-hidden="true")                      
+                .mdl-cell.mdl-cell--3-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-7.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Bugtracker
+                   .mdl-card__supporting-text(id="bugtracker")
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | Bugzilla             
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-bug(aria-hidden="true")
+                .mdl-cell.mdl-cell--5-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-6.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Game engine
+                   .mdl-card__supporting-text(id="gameEngine")
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | Unity3D
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | Allegro
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | Construct                           
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | XNA                           
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | GameMaker: Studio
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | M.U.G.E.N                           
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | Ogre
+                     span.mdl-chip
+                         span.mdl-chip__text
+                           | Openbor          
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-gamepad(aria-hidden="true")                      
+                .mdl-cell.mdl-cell--4-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-8.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | IDE
+                   .mdl-card__supporting-text(id="ide")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Visual Studio
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | MonoDevelop
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Eclipse
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | NetBeans
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Intel XDK"      
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-window-maximize(aria-hidden="true")
+                .mdl-cell.mdl-cell--4-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-9.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Front-end
+                   .mdl-card__supporting-text(id="front-end")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | AngularJS
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | RequireJS
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | HTML5                         
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | CSS3
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | jQuery   
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | ExtJS                         
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-laptop(aria-hidden="true")
+                .mdl-cell.mdl-cell--4-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-10.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Back-end
+                   .mdl-card__supporting-text(id="back-end")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Node.JS
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Gulp
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | JADE                         
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Grunt
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Bower
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | JSP
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | ASP.NET   
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-server(aria-hidden="true")                           
+                .mdl-cell.mdl-cell--4-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-7.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Graphic design tools
+                   .mdl-card__supporting-text(id="graphicDesignTools")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Adobe After Effects
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Adobe Photoshop
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Adobe Ilustrator
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | GIMP
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-pencil(aria-hidden="true")
+                .mdl-cell.mdl-cell--3-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-12.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Office tools
+                   .mdl-card__supporting-text(id="officeTools")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Microsoft Office
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | OpenOffice   
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-align-left(aria-hidden="true")                          
+                .mdl-cell.mdl-cell--4-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-5.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Software development methodologies
+                   .mdl-card__supporting-text(id="softwareDevelopmentMethodologies")
+                    span.mdl-chip
+                       span.mdl-chip__text
+                         | Extreme Programming
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Scrumm
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Kanban
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | Open UP   
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-cogs(aria-hidden="true")
+                .mdl-cell.mdl-cell--4-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-3.clp-card-skills.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Software development standards
+                   .mdl-card__supporting-text(id="softwareDevelopmentStandards")
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | CMMI
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | MPSBR
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | PGQP
+                     span.mdl-chip
+                       span.mdl-chip__text
+                         | ISO 9001  
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    i.fa.fa-certificate(aria-hidden="true")
+              .mdl-grid(id="projects")
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.harion.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Harion.stream
+                   .mdl-card__supporting-text
+                       p
+                        | Harion is a video meeting online platform. Developed using webRTC it is possible start/record a meeting and see a webinar on any device. Harion can be used for online education as well like business training tool, online class and private teachers can teach idioms to their students. You can also use Harion for sales or job interview, so you can save time and money on travel expenses without giving up the benefits of face-to-face contact and also you do not need to share your personal or business email.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | UX/UI Designer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Marketing
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Infrastructure
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="harion")
+                      i.fa.fa-play(aria-hidden="true")
+                      |  Harion page
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.canestechnologies.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Canes Technologies
+                   .mdl-card__supporting-text
+                       p
+                        | Start a bussiness needs total focus on your objectives and right dedication. Canes Technologies was born to create and develop ideias. It was a software development studio with a simple goal: We want to optimize your time, automating your repetitive tasks, benefiting your business. 
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Co-Founder
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="canestechnologies")
+                      i.fa.fa-building(aria-hidden="true")
+                      |  Canes Technologies page
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.spiderThreat.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | SpiderThreat
+                   .mdl-card__supporting-text
+                       p
+                        | In a haunted-house you, a mother spider, needs to feed your 300 spiders. It is not a easy job when the house it is surrounded by flying dragons, when a dragon get close by your web you must hold on it, with all your strenght.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Animator
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="spiderThreat")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  GlobalGameJam 2015 page
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.wackySheriffFromMars.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Wacky Sheriff From Mars (WIP)
+                   .mdl-card__supporting-text
+                       p
+                        | You are acting this time as a Wacky Sheriff, and you lives on planet Mars. With a space guns you do your jobs better than any Sheriff from Pluto.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Animator
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Graphic Designer                     
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="wackySheriffFromMars")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  assets
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.madasadam.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | MAD AS ADAM
+                   .mdl-card__supporting-text
+                       p
+                        | Mad as Adam (read from right to left) was my first game made in Global Game Jam. The theme to GGJ14 was "We don't see things as they are, we see them as we are". You control Adam, a schizophrenic father who receives a letter of his daughter saying that these are the last days of her. With this, Adam needs to escape of the asylum and go to the hospital to save her.
+                        | Mad as Adam it's a simple game, but the real challenge was to work with a lot of people (our team was 11 members) and manage this project, it was a lot of fun working with these guys.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Game Designer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Project Managemer
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="madasadam")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  GlobalGameJam 2014 page
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.orixas.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | ORIXAS
+                   .mdl-card__supporting-text
+                       p
+                        | In this game, you control a weak slave with no fighting skills, he only knows hide. With help of the power of the Gods of the wilds and thunders, Iansã, the slave must solve puzzles to escape from the prison called Cidadela. This game uses  Afro-Brazilian mythology. The game developed was the final work for the specialization course of Development of Digital Games.
+                        | All the objects in this games are scraps, enemies are also combination of these scraps.To create these assests we took picture by picture, getting the much light possible, to then digitalize and clean in photoshop.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Game Designer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Level Designer              
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="orixas")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  Download Now
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.underRiders.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | Under Riders
+                   .mdl-card__supporting-text
+                       p
+                        | I made this, thinking in the game RiverRider. But here, you need Oxygen and controls two characters. You should collect all the treasures and discovery a new place to end the game.
+                        | Playing with the submarine, you can pass through fish and monsters. Playing with the diver, your oxygen will decrease. To recover your oxygen you need enter on the submarine. Now if your diver is outside the submarine and you choose the submarine to play, your oxygen will decrease as well. And your diver may die.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Game Designer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Graphic Designer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Level Designer              
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="underRiders")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  Ludum Dare 29 Page
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.skyBattle.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | SKY BATTLE
+                   .mdl-card__supporting-text
+                       p
+                        | You're the captain Smoker and needs to get alive in Ice Island before your gas tank is empty. SkyBattle is a aeroplane shooter style game, with 3 games modes: Single Player, Multiplayer and Classic Mode. The Classic Mode reminds the classic game River Ride, with a camera view top-down perspective.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Game Designer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Level Designer              
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="skyBattle")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  Download Now
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.sosTheBus.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | SOS(SOMEONESTOP) - The Bus (WIP)
+                   .mdl-card__supporting-text
+                       p
+                        | This is a super little runner game. You are super late to get the bus, but you almost get him and this is the last bus to get you at home.
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Graphic Designer                           
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Level Designer
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="sosTheBus")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  Ludum Dare 28 Page
+                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.ergos.mdl-card.mdl-shadow--2d
+                  .mdl-card__title.mdl-card--expand
+                    h4
+                      | E.R.G.O.S
+                   .mdl-card__supporting-text
+                       p
+                        | In "Evil Robots Other Guys from Space" you control the aliens attacking the earth, but the humans will defend their planet with all strength. This game is like the space invaders, but you're the villain. The game was created for ludum dare 25 where the theme is "You are the villain".
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Programmer
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Level Designer                       
+                       span.mdl-chip
+                         span.mdl-chip__text
+                           | Sound Designer          
+                  .mdl-card__actions.mdl-card--border
+                    .mdl-layout-spacer
+                    .mdl-button.mdl-js-button(id="ergos")
+                      i.fa.fa-gamepad(aria-hidden="true")
+                      |  Ludum Dare 25 Page
+                 .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.tapper.mdl-card.mdl-shadow--2d
+                    .mdl-card__title.mdl-card--expand
+                      h4
+                        | Tapper Remake (WIP)
+                     .mdl-card__supporting-text
+                         p
+                          | A Tapper clone made in XNA
+                         span.mdl-chip
+                           span.mdl-chip__text
+                             | Programmer
+                    .mdl-card__actions.mdl-card--border
+                      .mdl-layout-spacer
+                      .mdl-button.mdl-js-button(id="tapper")
+                        i.fa.fa-gamepad(aria-hidden="true")
+                        |  Download Now
+                 .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.spaceInvasion.mdl-card.mdl-shadow--2d
+                    .mdl-card__title.mdl-card--expand
+                      h4
+                        | Space Invasion
+                     .mdl-card__supporting-text
+                         p
+                          | You are a space trooper called Samuel Liberty Jackson aka Samuel L. Jackson and your job is save the earth from a asteroids attacks.
+                         span.mdl-chip
+                           span.mdl-chip__text
+                             | Programmer
+                         span.mdl-chip
+                           span.mdl-chip__text
+                             | 3D Graphic Designer
+                    .mdl-card__actions.mdl-card--border
+                      .mdl-layout-spacer
+                      .mdl-button.mdl-js-button(id="spaceInvasion")
+                        i.fa.fa-gamepad(aria-hidden="true")
+                        |  Download Now                             
+                 .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.breakout.mdl-card.mdl-shadow--2d
+                    .mdl-card__title.mdl-card--expand
+                      h4
+                        | Breakout
+                     .mdl-card__supporting-text
+                         p
+                          | A Breakout clone, not finished. Made in 1 day programmed in Java. My real goal at this game was have done my first game engine.
+                         span.mdl-chip
+                           span.mdl-chip__text
+                             | Programmer
+                    .mdl-card__actions.mdl-card--border
+                      .mdl-layout-spacer
+                      .mdl-button.mdl-js-button(id="breakout")
+                        i.fa.fa-gamepad(aria-hidden="true")
+                        |  Download Now
+                 .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.fighTche.mdl-card.mdl-shadow--2d
+                    .mdl-card__title.mdl-card--expand
+                      h4
+                        | Fightche! (WIP)
+                     .mdl-card__supporting-text
+                         p
+                          | It was my second game. Fightche is a fighting game based on Gauchos Culture. The game was not finished and only works on debug mode.
+                         span.mdl-chip
+                           span.mdl-chip__text
+                             | Programmer
+                         span.mdl-chip
+                           span.mdl-chip__text
+                             | Graphic Designer
+                    .mdl-card__actions.mdl-card--border
+                      .mdl-layout-spacer
+                      .mdl-button.mdl-js-button(id="fighTche")
+                        i.fa.fa-gamepad(aria-hidden="true")
+                        |  Download Now
+                 .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.getTheRed.mdl-card.mdl-shadow--2d
+                    .mdl-card__title.mdl-card--expand
+                      h4
+                        | Get the Red (WIP)
+                     .mdl-card__supporting-text
+                         p
+                          | My first game made using C++ and Allegro. In this game you are White and you are playing "play tag" with Red. It is your turn to tag the Red
+                         span.mdl-chip
+                           span.mdl-chip__text
+                             | Programmer      
+                    .mdl-card__actions.mdl-card--border
+                      .mdl-layout-spacer
+                      .mdl-button.mdl-js-button(id="getTheRed")
+                        i.fa.fa-gamepad(aria-hidden="true")
+                        |  Download Now

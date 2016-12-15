@@ -1,0 +1,936 @@
+.grid-title {
+	background-color: #0f0;
+	color: #000;
+	box-shadow: 0 0 80px #0A0, inset 0 0 150px 50px #090;
+	background: repeating-linear-gradient(0deg, #050, #050 1px, #010 1px, #010 2px);
+	text-align: center;
+	margin: 0;
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+
+	/*background-color: #333233;*/
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+}
+.mdl-tabs__tab.mdl-tabs-fx-none.mdl-tabs__tab-disable, .mdl-button.mdl-js-button.disable {
+	color: grey;
+	border: 0;
+}
+.mdl-tabs__tab.mdl-tabs-fx-none.mdl-tabs__tab-disable:hover, .mdl-button.mdl-js-button.disable:hover {
+	animation: none;
+	color: grey;
+	border: 0;
+	box-shadow: none;
+	background: 0;
+	cursor: not-allowed;
+}
+.padding-0 {
+	padding: 0;
+}
+.margin-top-0 {
+	margin-top: 0;
+}
+.padding-left-right-8 {
+	padding: 0 8px 0 8px;
+}
+.fontasticFix-desktop {
+	font-size: x-large;
+	line-height: 1.8;
+	float: left;
+	position: absolute;
+	display: block;
+}
+.fontasticFix-xx-large {
+	font-size: xx-large;
+	line-height: 1.8;
+}
+.fontasticFix-x-large {
+	font-size: x-large;
+	line-height: 1.8;
+}
+.mdl-tabs__tab.mdl-tabs-fx-none {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+@font-face {
+	font-family: 'Share Tech Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Share Tech Mono'), local('ShareTechMono-Regular'), url(https://fonts.gstatic.com/s/sharetechmono/v6/RQxK-3RA0Lnf3gnnnNrAsYdJ2JT0J65PSe7wdxAnx_I.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+::selection {
+	background-color: green;
+}
+.calvin {
+
+	/*background-image: url(calvin.png);*/
+
+	/*background-size: cover; */
+	mix-blend-mode: overlay;
+}
+.display-flex {
+	display: flex;
+}
+.calvin img {
+	width: 100%;
+}
+.margin-2 {
+	margin: 2px;
+}
+.margin-20 {
+	margin: 20px;
+}
+.miniDisplay {
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+}
+.imageDisplay {
+	border: 1px solid #0f0;
+	position: relative;
+	overflow: hidden;
+	mix-blend-mode: multiply;
+}
+.imageDisplay div {
+	background-color: #000;
+	box-shadow: 0 0 80px #0A0, inset 0 0 150px 50px #090;
+	background: repeating-linear-gradient(0deg, #050, #050 1px, #010 1px, #010 2px);
+}
+.visual1 {
+	width: 100%;  /*height: 200px;*/
+	border: 1px solid green;
+	position: relative;  /*margin-bottom: 10px;*/
+}
+.visual1:after, .visual1:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.visual1:after {
+	content: "";
+	display: block;
+	border-bottom: 1px solid green;
+	width: 100%;
+	height: 1%;
+	animation: scan 5s infinite  linear;
+}
+.visual1:before {
+	content: "";
+	display: block;
+	border-right: 1px solid green;
+	height: 100%;
+	width: 1%;
+	animation: scan 0.3s infinite alternate linear;
+}
+body, html {
+	overflow: hidden;
+	font-family: 'Share Tech Mono', monospace;
+	background-color: #121;
+	box-shadow: inset 0 0 200px #020;
+	height: 100%;
+	background: linear-gradient(to bottom, #001100 0%, #111311 100%);
+	color: #0f0;
+	font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Share Tech Mono', monospace;
+	text-align: left;
+	text-transform: uppercase;
+	margin: 10px;
+	display: block;
+	font-weight: bold;
+	font-size: 1.1em;
+	float: none;
+	clear: both;
+}
+p {
+	font-family: 'Share Tech Mono', monospace;
+	text-align: left;
+	color: #0f0;
+}
+.name {
+	font-family: 'Share Tech Mono', monospace;
+	color: #0f0;
+	animation: flicker 0.001s infinite;
+	mix-blend-mode: screen;
+	text-align: right;
+}
+body {
+
+	/*animation: twitch 1s infinite;*/
+	background: repeating-linear-gradient(0deg, #000, #000 2px, #020 2px, #020 4px);
+}
+.screen {
+	font-family: 'Share Tech Mono', monospace;
+	display: flex;
+	animation: flicker 0.001s infinite;
+	mix-blend-mode: screen;
+}
+@keyframes scan {
+	0% {
+	}
+	100% {
+		height: 100%;
+		width: 100%;
+	}
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.7;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes twitch {
+	0% {
+		padding: 20px;
+	}
+	50% {
+		padding: 20px;
+	}
+	51% {
+		padding: 19px;
+	}
+	50% {
+		padding: 20px;
+	}
+	100% {
+		padding: 20px;
+	}
+}
+div > .mdl-card__title-text {
+	font-family: 'Share Tech Mono', monospace;
+	color: #0f0;
+}
+.mdl-button, .mdl-tabs__tab {
+	font-family: 'Share Tech Mono', monospace;
+	color: #0f0;
+	background: transparent;
+	padding: 10px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	margin: 0 10px 10px 0;
+	outline: none;
+	border: 1px solid #0f0;
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0.5);
+	cursor: pointer;
+}
+.mdl-tabs__tab:hover, .mdl-button:hover, .mdl-chip:hover, .hover {
+	animation: flicker 0.1s infinite alternate;
+	color: #000;
+	border: 1px solid transparent;
+	box-shadow: 0 0 40px #0A0, inset 0 0 40px #0A0;
+}
+.mdl-tabs__tab.is-active {
+	font-family: 'Share Tech Mono', monospace;
+	color: #0f0;
+	background: transparent;
+}
+
+/*Gradent Elements*/
+.mdl-tabs__tab:hover, .mdl-button:hover, .mdl-chip:hover, hr, img, .hover {
+	background: repeating-linear-gradient(0deg, #0c0, #0c0 1px, #050 1px, #050 2px);
+}
+
+/*.clp-card.mdl-card {
+background-color: #3367d6;
+}
+.clp-card > .mdl-card__title {
+color: #efefef;
+}
+.clp-card > .mdl-card__supporting-text {
+color: #fff;
+}*/
+
+//SKILLS
+
+.mdl-card__supporting-text >.mdl-chip {
+	background-color: #fff;
+	margin-right: 4px;
+}
+div > .mdl-chip {
+	font-family: 'Share Tech Mono', monospace;
+	border-radius: 0px;
+	margin-right: 3px;
+	color: #0f0;
+	border: 1px solid #0f0;
+	background-color: #000;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes card-animation {
+	from {
+		top: 50px;
+		opacity: 0;
+	}
+	to {
+		top: 0px;
+		opacity: 1;
+	}
+}
+
+/* Standard syntax */
+@keyframes card-animation {
+	from {
+		top: 50px;
+		opacity: 0;
+	}
+	to {
+		top: 0px;
+		opacity: 1;
+	}
+}
+.clp-card-skills.mdl-card {
+	background-color: transparent;
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+
+	/*background-color: #333233;*/
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.clp-card-skills > .mdl-card__actions {
+	border-color: #0f0;
+}
+.clp-card-skills > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+}
+.clp-card-skills >.mdl-card__supporting-text {
+	padding-top: 0;
+}
+.clp-card-skills > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.clp-card-skills > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.clp-card-skills > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.clp-card-skills > .mdl-card__title, .clp-card-skills > .mdl-card__actions, .clp-card-skills > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.madasadam.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.madasadam > .mdl-card__actions {
+	border-color: #0f0;
+}
+.madasadam > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url(madasadam.png);
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.madasadam >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.madasadam > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.madasadam > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.madasadam > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.madasadam > .mdl-card__title, .madasadam > .mdl-card__actions, .madasadam > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.orixas.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.orixas > .mdl-card__actions {
+	border-color: #0f0;
+}
+.orixas > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("orixas.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.orixas >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.orixas > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.orixas > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.orixas > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.orixas > .mdl-card__title, .orixas > .mdl-card__actions, .orixas > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.underRiders.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.underRiders > .mdl-card__actions {
+	border-color: #0f0;
+}
+.underRiders > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("underRiders.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.underRiders >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.underRiders > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.underRiders > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.underRiders > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.underRiders > .mdl-card__title, .underRiders > .mdl-card__actions, .underRiders > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.skyBattle.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.skyBattle > .mdl-card__actions {
+	border-color: #0f0;
+}
+.skyBattle > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("skybattle.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.skyBattle >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.skyBattle > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.skyBattle > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.skyBattle > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.skyBattle > .mdl-card__title, .skyBattle > .mdl-card__actions, .skyBattle > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.ergos.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.ergos > .mdl-card__actions {
+	border-color: #0f0;
+}
+.ergos > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("ergos.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.ergos >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.ergos > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.ergos > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.ergos > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.ergos > .mdl-card__title, .ergos > .mdl-card__actions, .ergos > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.sosTheBus.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.sosTheBus > .mdl-card__actions {
+	border-color: #0f0;
+}
+.sosTheBus > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("sosTheBus.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.sosTheBus >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.sosTheBus > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.sosTheBus > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.sosTheBus > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.sosTheBus > .mdl-card__title, .sosTheBus > .mdl-card__actions, .sosTheBus > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.getTheRed.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.getTheRed > .mdl-card__actions {
+	border-color: #0f0;
+}
+.getTheRed > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("getTheRed.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.getTheRed >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.getTheRed > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.getTheRed > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.getTheRed > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.getTheRed > .mdl-card__title, .getTheRed > .mdl-card__actions, .getTheRed > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.fighTche.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.fighTche > .mdl-card__actions {
+	border-color: #0f0;
+}
+.fighTche > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("fighTche.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.fighTche >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.fighTche > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.fighTche > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.fighTche > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.fighTche > .mdl-card__title, .fighTche > .mdl-card__actions, .fighTche > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.spaceInvasion.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.spaceInvasion > .mdl-card__actions {
+	border-color: #0f0;
+}
+.spaceInvasion > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("spaceInvasion.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.spaceInvasion >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.spaceInvasion > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.spaceInvasion > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.spaceInvasion > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.spaceInvasion > .mdl-card__title, .spaceInvasion > .mdl-card__actions, .spaceInvasion > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.breakout.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.breakout > .mdl-card__actions {
+	border-color: #0f0;
+}
+.breakout > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("breakout.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.breakout >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.breakout > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.breakout > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.breakout > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.breakout > .mdl-card__title, .breakout > .mdl-card__actions, .breakout > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.tapper.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.tapper > .mdl-card__actions {
+	border-color: #0f0;
+}
+.tapper > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("tapper.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.tapper >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.tapper > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.tapper > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.tapper > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.tapper > .mdl-card__title, .tapper > .mdl-card__actions, .tapper > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.spiderThreat.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.spiderThreat > .mdl-card__actions {
+	border-color: #0f0;
+}
+.spiderThreat > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("spiderThreat.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.spiderThreat >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.spiderThreat > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.spiderThreat > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.spiderThreat > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.spiderThreat > .mdl-card__title, .spiderThreat > .mdl-card__actions, .spiderThreat > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.wackySheriffFromMars.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.wackySheriffFromMars > .mdl-card__actions {
+	border-color: #0f0;
+}
+.wackySheriffFromMars > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("wackySheriffFromMars.png");
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.wackySheriffFromMars >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.wackySheriffFromMars > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.wackySheriffFromMars > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.wackySheriffFromMars > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.wackySheriffFromMars > .mdl-card__title, .wackySheriffFromMars > .mdl-card__actions, .wackySheriffFromMars > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.canestechnologies.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.canestechnologies > .mdl-card__actions {
+	border-color: #0f0;
+}
+.canestechnologies > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("canestechnologies.png");
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #166aad;
+	height: 150px;
+}
+.canestechnologies >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.canestechnologies > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.canestechnologies > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.canestechnologies > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.canestechnologies > .mdl-card__title, .canestechnologies > .mdl-card__actions, .canestechnologies > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+.harion.mdl-card {
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+	background-color: transparent;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.harion > .mdl-card__actions {
+	border-color: #0f0;
+}
+.harion > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+	background: url("harion.png");
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #299cf7;
+	height: 150px;
+}
+.harion >.mdl-card__supporting-text {
+	padding-top: 2px;
+}
+.harion > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.harion > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.harion > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.harion > .mdl-card__title, .harion > .mdl-card__actions, .harion > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
