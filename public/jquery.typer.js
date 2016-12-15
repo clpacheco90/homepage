@@ -1,3 +1,8 @@
+// homepage is developed by Calvin Pacheco - https://calvinpacheco.com
+// ₢ CopyRight 2016
+// Last time updated: 2016-12-15 4:43:48 PM UTC
+
+
 /*!
  * jquery.typer.js 0.0.4 - https://github.com/yckart/jquery.typer.js
  * The typewriter effect
