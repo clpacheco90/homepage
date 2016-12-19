@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     // includes files within path
                     {
                         expand: true,
-                        cwd: 'src/views/',
+                        cwd: 'views/',
                         src: ['**/*.jade'],
                         dest: 'public/',
                         filter: 'isFile',

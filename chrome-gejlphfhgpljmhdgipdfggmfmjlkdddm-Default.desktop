@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Calvin Pacheco
+Exec=/usr/bin/chromium-browser --profile-directory=Default --app-id=gejlphfhgpljmhdgipdfggmfmjlkdddm
+Icon=chrome-gejlphfhgpljmhdgipdfggmfmjlkdddm-Default
+StartupWMClass=crx_gejlphfhgpljmhdgipdfggmfmjlkdddm

@@ -157,6 +157,8 @@ p {
 	text-align: left;
 	color: #0f0;
 }
+
+
 .name {
 	font-family: 'Share Tech Mono', monospace;
 	color: #0f0;
@@ -933,4 +935,49 @@ div > .mdl-chip {
 }
 .harion > .mdl-card__title, .harion > .mdl-card__actions, .harion > .mdl-card__actions > .mdl-button {
 	color: #0f0;
+}
+
+.clp-card-knowme.mdl-card {
+	background-color: transparent;
+	-webkit-animation: card-animation 1s; /* Chrome, Safari, Opera */
+	animation: card-animation 1s;	/*background-color: rgb(33, 150, 243);*/
+
+	/*background-color: #333233;*/
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	-webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+	animation-delay: .5s;
+	border: 1px solid #0f0;
+}
+.clp-card-knowme > .mdl-card__actions {
+	border-color: #0f0;
+}
+.clp-card-knowme > .mdl-card__title {
+	align-items: flex-start;
+	padding-bottom: 0;
+}
+.clp-card-knowme >.mdl-card__supporting-text {
+	color: #0f0;
+	padding-top: 0;
+}
+.clp-card-knowme > .mdl-card__title > h4 {
+	margin-top: 0;
+}
+.clp-card-knowme > .mdl-card__actions {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.clp-card-knowme > .mdl-card__actions > .material-icons {
+	padding-right: 10px;
+}
+.clp-card-knowme > .mdl-card__title, .clp-card-knowme > .mdl-card__actions, .clp-card-knowme > .mdl-card__actions > .mdl-button {
+	color: #0f0;
+}
+
+li.mdl-list__item{
+	color: #0f0;
+	font-family: 'Share Tech Mono', monospace;
 }

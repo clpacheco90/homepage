@@ -1,5 +1,15 @@
 // homepage is developed by Calvin Pacheco - https://calvinpacheco.com
 // ₢ CopyRight 2016
+// Last time updated: 2016-12-19 11:42:37 AM UTC
+
+
+// homepage is developed by Calvin Pacheco - https://calvinpacheco.com
+// ₢ CopyRight 2016
+// Last time updated: 2016-12-19 11:41:18 AM UTC
+
+
+// homepage is developed by Calvin Pacheco - https://calvinpacheco.com
+// ₢ CopyRight 2016
 // Last time updated: 2016-12-15 4:43:48 PM UTC
 
 
@@ -10,7 +20,7 @@ $(document).ready(function() {
     $("#tbTitles").hide();
 
     $("#profile1").show();
-    $("#skills").show();
+    $("#experience").show();
     $("#tbTitles").show();
 
     $("#tabKnowMe, #btKnowMe").on("click", function() {
@@ -34,6 +44,51 @@ $(document).ready(function() {
         $("#tabProjects").toggleClass("hover");
     })
 
+    $("#tabExp, #btExp").on("click", function() {
+        hideAllSections(1000);
+        $("#experience").show();
+        $("#tbTitles").children().text($("#btExp").text());
+        $("#tabExp").toggleClass("hover");
+    })
+
+    skills();
+
+    //animateProfiles();
+
+})
+
+function animateProfiles() {
+    $("#profile1").fadeOut(200);
+    $("#profile2").fadeIn(200).fadeOut(800);
+    //$("#profile3").fadeIn(1200).fadeOut(1600);
+}
+
+function hideProfiles() {
+    $("#profile1").hide();
+    $("#profile2").hide();
+    $("#profile3").hide();
+}
+
+function hideAllSections(timer) {
+    setTimeout(function() {
+        hideAllSections();
+    }, timer);
+}
+
+function hideAllSections() {
+
+    $("#tabKnowMe").removeClass("hover");
+    $("#tabSkills").removeClass("hover");
+    $("#tabProjects").removeClass("hover");
+    $("#tabExp").removeClass("hover");
+
+    $("#experience").hide();
+    $("#knowme").hide();
+    $("#skills").hide();
+    $("#projects").hide();
+}
+
+function skills() {
     $("#madasadam").on("click", function() {
         window.location.href = "http://globalgamejam.org/2014/games/mad-adam";
     });
@@ -93,35 +148,4 @@ $(document).ready(function() {
     $("#harion").on("click", function() {
         window.location.href = "https://harion.stream";
     });
-    //animateProfiles();
-
-})
-
-function animateProfiles() {
-    $("#profile1").fadeOut(200);
-    $("#profile2").fadeIn(200).fadeOut(800);
-    //$("#profile3").fadeIn(1200).fadeOut(1600);
-}
-
-function hideProfiles() {
-    $("#profile1").hide();
-    $("#profile2").hide();
-    $("#profile3").hide();
-}
-
-function hideAllSections(timer) {
-    setTimeout(function() {
-        hideAllSections();
-    }, timer);
-}
-
-function hideAllSections() {
-
-    $("#tabKnowMe").removeClass("hover");
-    $("#tabSkills").removeClass("hover");
-    $("#tabProjects").removeClass("hover");
-
-    $("#knowme").hide();
-    $("#skills").hide();
-    $("#projects").hide();
 }
