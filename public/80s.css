@@ -258,11 +258,11 @@ color: #fff;
 
 //SKILLS
 
-.mdl-card__supporting-text >.mdl-chip {
+.mdl-card__supporting-text >.mdl-chip, li.mdl-list__item > .mdl-chip  {
 	background-color: #fff;
 	margin-right: 4px;
 }
-div > .mdl-chip {
+.mdl-chip {
 	font-family: 'Share Tech Mono', monospace;
 	border-radius: 0px;
 	margin-right: 3px;
@@ -980,4 +980,47 @@ div > .mdl-chip {
 li.mdl-list__item{
 	color: #0f0;
 	font-family: 'Share Tech Mono', monospace;
+}
+
+//SAY HI
+.mdl-textfield.mdl-js-textfield{
+    background-color: transparent;
+    width: 100%;
+}
+.mdl-textfield.mdl-js-textfield.is-upgraded{
+    background-color: transparent;
+    width: 100%;
+}
+.mdl-textfield.mdl-js-textfield.is-upgraded.is-focused{
+    background-color: transparent;
+    width: 100%;
+}
+
+.mdl-textfield__label{
+	color: #0f0;
+}
+.mdl-textfield__label::after{
+	background-color: #0f0;
+}
+
+form{
+	margin: 10px;
+}
+
+form > .mdl-button {
+	font-family: 'Share Tech Mono', monospace;
+	color: #0f0;
+	background: transparent;
+	padding: 10px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	display: block;
+	width: 98%;
+	margin: 0 10px 10px 0;
+	outline: none;
+	border: 1px solid #0f0;
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0.5);
+	cursor: pointer;
+	line-height: 1;
+
 }

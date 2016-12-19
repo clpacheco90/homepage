@@ -23,6 +23,11 @@ html
     meta(name="apple-mobile-web-app-title" content="Calvin Pacheco")
     meta(name="application-name" content="Calvin Pacheco")
     meta(name="theme-color" content="#1c6335")
+    script( type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js")
+    script.
+        (function(){
+        emailjs.init("user_YesEvwFswtytNR2T7obIL");
+        })();        
   body      
        .mdl-layout.mdl-js-layout.mdl-layout--fixed-header.mdl-layout--no-desktop-drawer-button.screen
         main.mdl-layout__content
@@ -40,7 +45,7 @@ html
                       | Calvin Luiz Pacheco
                   .mdl-tabs.mdl-js-ripple-effect
                     .mdl-tabs__tab-bar(style="border: none;")
-                      a.mdl-tabs__tab.mdl-tabs-fx-none.mdl-tabs__tab-disable(id="tabHi")
+                      a.mdl-tabs__tab.mdl-tabs-fx-none(id="tabSayHi")
                         i.fa.fa-hand-spock-o.fontasticFix-x-large(aria-hidden="true")
                       a.mdl-tabs__tab.mdl-tabs-fx-none(id="tabKnowMe")
                         .icon-spock.fontasticFix-xx-large                        
@@ -65,7 +70,7 @@ html
                   .mdl-card__actions.mdl-card--border                  
                   ul.mdl-list
                       li.mdl-list__item.padding-0
-                        .mdl-button.mdl-js-button.disable(id="btSayHi")
+                        .mdl-button.mdl-js-button(id="btSayHi")
                           i.fa.fa-hand-spock-o.fontasticFix-desktop(aria-hidden="true" style="line-height: 1.2")
                           | Say Hi!                    
                       li.mdl-list__item.padding-0
@@ -93,6 +98,24 @@ html
               .mdl-cell.mdl-cell--12-col-desktop.mdl-cell.mdl-cell--8-col-tablet.mdl-cell--4-phone.margin-top-0.padding-left-right-8(id="tbTitles")
                  h4.grid-title
                     | *********
+              .mdl-grid(id="sayhi")
+                .mdl-cell.mdl-cell--12-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-knowme.mdl-card.mdl-shadow--2dp
+                   .mdl-card__title.mdl-card--expand
+                     | Get in touch through the form below:
+                    form(id="myform" method="post")
+                        .mdl-textfield.mdl-js-textfield
+                            input.mdl-textfield__input(required type="email" id="sample1" name="to_email")
+                            label.mdl-textfield__label(for="sample1")
+                                | E-mail...
+                        .mdl-textfield.mdl-js-textfield
+                            input.mdl-textfield__input(required type="text" id="sample2" name="name")
+                            label.mdl-textfield__label(for="sample2")
+                                | Name...
+                        .mdl-textfield.mdl-js-textfield
+                            input.mdl-textfield__input(required type="text" id="sample3" rows= "3" name="message_html")
+                            label.mdl-textfield__label(for="sample3")
+                                | Message...        
+                        input.mdl-button.mdl-js-button(id="submit" type="submit" value="Send")                            
               .mdl-grid(id="knowme")
                 .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-knowme.mdl-card.mdl-shadow--2dp
                   .mdl-card__title.mdl-card--expand
@@ -100,13 +123,7 @@ html
                       | First Contact       
                    .mdl-card__supporting-text
                      | When I was five years old, my dad bought a i486. He used to let me some notes explaining how to use DOS, before he went work. My firsts and favorites games were Mortal Kombat II and Fifa95. I remember like yesterday, I putting a cheat-code, "AICULEDSSUL", to win all rounds just with one hit on MKII. Since that time, I have been addicting to create games. So, My name is Calvin and I'm software developer.                                
-              .mdl-grid(id="skills")
-                .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-skills.mdl-card.mdl-shadow--2dp
-                  .mdl-card__title.mdl-card--expand
-                     h4
-                      | First Contact       
-                   .mdl-card__supporting-text
-                     | When I was five years old, my dad bought a i486. He used to let me some notes explaining how to use DOS, before he went work. My firsts and favorites games were Mortal Kombat II and Fifa95. I remember like yesterday, I putting a cheat-code, "AICULEDSSUL", to win all rounds just with one hit on MKII. Since that time, I have been addicting to create games. So, My name is Calvin and I'm software developer.                
+              .mdl-grid(id="skills")            
                 .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-skills.mdl-card.mdl-shadow--2dp
                   .mdl-card__title.mdl-card--expand
                     h4
@@ -852,3 +869,305 @@ html
                             | Organized and normalized database MySQL;                       
                    .mdl-card__actions.mdl-card--border
                      | Porto Alegre from February 2011 to July 2011
+                .mdl-cell.mdl-cell--12-col-desktop.mdl-cell--8-col-tablet.mdl-cell--order-1.clp-card-knowme.mdl-card.mdl-shadow--2dp
+                  .mdl-card__title.mdl-card--expand
+                     h4
+                        | Workshop
+                    .mdl-card__supporting-text
+                     ul.mdl-list
+                        li.mdl-list__item
+                            | Adobe Creative Suite 3 Web Premium.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Faculdade de Tecnologia SenacRS
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2008
+                        li.mdl-list__item
+                            | Orientação a Objetos Com C#.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | SENACTECH
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2009                          
+                        li.mdl-list__item
+                            | Tunning de Banco de Dados.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | SENACTECH
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2009                            
+                        li.mdl-list__item
+                            | Programação para Web com PHP.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | SENACTECH
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2009                            
+                        li.mdl-list__item
+                            | Software Brasileiro: Uma Odisséia no Espaço/Tempo, Julio Neves.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | SENACTECH
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2009                            
+                        li.mdl-list__item
+                            | Internet e Comunicação Digital, Jonatas Abbot.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | SENACTECH
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2009                            
+                        li.mdl-list__item
+                            | Meteorologia Especializada: Tendências em GeoMeteorologia, Jean Espinoza.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | GEOMeeting
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2010
+                        li.mdl-list__item
+                            | Imagens de Satélite RapidEye: Resolução Espacial, Espectral, Radiométrica e Temporal em Projetos Operacionais, Marcos Leandro Kazmierczak.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | GEOMeeting
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2010                            
+                        li.mdl-list__item
+                            | Utilização de Geotecnologias na Gestão de Recursos Hídricos, João Manuel Trindade.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | GEOMeeting
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2010                            
+                        li.mdl-list__item
+                            | Mapas Digitais Voltados para Soluções Corporativas, Murilo Augusto de Oliveira.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | GEOMeeting
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2010
+                        li.mdl-list__item
+                            | Georeferenciamento de Imagens de Satélite, Marlos Batista.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | GEOMeeting
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2010                            
+                        li.mdl-list__item
+                            | Aplicação das novas Tecnologias de Informação na produção das Bases Cartográficas do IBGE e como suporte ao censo 2010, Corpo Técnico do IBGE/EU-RS/SBT.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | GEOMeeting
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2010                            
+                        li.mdl-list__item
+                            | Soluções Livres para Geoprocessamento, André Cruvinel Resende.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | GEOMeeting
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2010                            
+                        li.mdl-list__item
+                            | Modelagem de Dados.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Fundação Bradesco
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2011
+                        li.mdl-list__item
+                            | Ilustração e Design Gráfico para Web.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Fundação Bradesco
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2011                            
+                        li.mdl-list__item
+                            | WebDesign.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Fundação Bradesco
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2011                            
+                        li.mdl-list__item
+                            | C ++ Desenvolvimento Orientado a Objeto.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Fundação Bradesco
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2011                            
+                        li.mdl-list__item
+                            | UML: Linguagem de Modelagem Unificada.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Fundação Bradesco
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2011                            
+                        li.mdl-list__item
+                            | Curso Desenvolvimento de Jogos em Java.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Abrindo o jogo
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2011                  
+                        li.mdl-list__item
+                            | Curso Desenvolvimento com Google PlayN.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Abrindo o jogo
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2011                            
+                        li.mdl-list__item
+                            | DevCamp: Cloud Essentials.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft DevCamp
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015               
+                        li.mdl-list__item
+                            | DevCamp: Microsoft Azure.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft DevCamp
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015        
+                        li.mdl-list__item
+                            | DevCamp: Azure Virtual Machines.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft DevCamp
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015        
+                        li.mdl-list__item
+                            | DevCamp: Websites.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft DevCamp
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015        
+                        li.mdl-list__item
+                            | DevCamp: Cloud Services.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft DevCamp
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015
+                        li.mdl-list__item
+                            | DevCamp: Mobile App.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft DevCamp
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015                                      
+                        li.mdl-list__item
+                            | DevCamp: Business App.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft DevCamp
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015
+                        li.mdl-list__item
+                            | Microsoft Windows 10.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Microsoft
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2015
+                        li.mdl-list__item
+                            | Docker for beginners, Rafael Gomes.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | FISL
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016
+                        li.mdl-list__item
+                            | Cloud Computing & Free Software, Alessandro de Souza e Silva.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | FISL
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016
+                        li.mdl-list__item
+                            | Desenvolvimento Mobile Híbrido, Leonardo Seiji.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | FISL
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016
+                        li.mdl-list__item
+                            | Planejamento estratégico: alinhando propósito, objetivos, estratégias e execução. Henrique Girardi.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Farol Coworking
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016           
+                        li.mdl-list__item
+                            | Projetos ágeis também falham.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Agile Day
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016
+                        li.mdl-list__item
+                            | O Julgamento da TI Bimodal.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Agile Day
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016     
+                        li.mdl-list__item
+                            | Do comando-controle para coaching: 5 fatores que ajudaram numa transformação na gestão de pessoas.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Agile Day
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016     
+                        li.mdl-list__item
+                            | Acelerando Resultados Empresarias com Lean Business Analysis.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Agile Day
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016     
+                        li.mdl-list__item
+                            | Pay what you want: Uma nova abordagem para a precificação de projetos ágeis.
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | Agile Day
+                            span.mdl-chip
+                                span.mdl-chip__text
+                                    | 2016

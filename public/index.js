@@ -1,26 +1,10 @@
-// homepage is developed by Calvin Pacheco - https://calvinpacheco.com
-// ₢ CopyRight 2016
-// Last time updated: 2016-12-19 11:42:37 AM UTC
-
-
-// homepage is developed by Calvin Pacheco - https://calvinpacheco.com
-// ₢ CopyRight 2016
-// Last time updated: 2016-12-19 11:41:18 AM UTC
-
-
-// homepage is developed by Calvin Pacheco - https://calvinpacheco.com
-// ₢ CopyRight 2016
-// Last time updated: 2016-12-15 4:43:48 PM UTC
-
-
 $(document).ready(function() {
 
-    //hideProfiles();
     hideAllSections();
     $("#tbTitles").hide();
 
     $("#profile1").show();
-    $("#experience").show();
+    $("#skills").show();
     $("#tbTitles").show();
 
     $("#tabKnowMe, #btKnowMe").on("click", function() {
@@ -51,22 +35,34 @@ $(document).ready(function() {
         $("#tabExp").toggleClass("hover");
     })
 
+    $("#tabSayHi, #btSayHi").on("click", function() {
+        hideAllSections(1000);
+        $("#sayhi").show();
+        $("#tbTitles").children().text($("#btSayHi").text());
+        $("#tabSayHi").toggleClass("hover");
+    })
+
     skills();
-
-    //animateProfiles();
-
+    emailJS();
 })
 
-function animateProfiles() {
-    $("#profile1").fadeOut(200);
-    $("#profile2").fadeIn(200).fadeOut(800);
-    //$("#profile3").fadeIn(1200).fadeOut(1600);
-}
+function emailJS() {
+    var myform = $("form#myform");
+    myform.submit(function(event) {
+        event.preventDefault();
 
-function hideProfiles() {
-    $("#profile1").hide();
-    $("#profile2").hide();
-    $("#profile3").hide();
+        // Change to your service ID, or keep using the default service
+        var service_id = "default_service";
+        var template_id = "calvintemplate";
+
+        myform.find("button").text("Sending...");
+        emailjs.sendForm(service_id, template_id, "myform")
+            .then(function() {                                
+            }, function(err) {
+                alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));                
+            });
+        return false;
+    });
 }
 
 function hideAllSections(timer) {
@@ -81,7 +77,9 @@ function hideAllSections() {
     $("#tabSkills").removeClass("hover");
     $("#tabProjects").removeClass("hover");
     $("#tabExp").removeClass("hover");
+    $("#tabSayHi").removeClass("hover");
 
+    $("#sayhi").hide();
     $("#experience").hide();
     $("#knowme").hide();
     $("#skills").hide();
